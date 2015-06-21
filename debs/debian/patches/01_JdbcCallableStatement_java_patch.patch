@@ -1,0 +1,30 @@
+--- h2database-1.4.187/h2/src/main/org/h2/jdbc/JdbcCallableStatement.java	2015-04-10 14:14:31.000000000 -0430
++++ h2database-1.4.187~/h2/src/main/org/h2/jdbc/JdbcCallableStatement.java	2015-06-21 14:36:17.802023113 -0430
+@@ -1569,12 +1569,11 @@
+      * @param parameterIndex the parameter index (1, 2, ...)
+      * @param type the class of the returned value
+      */
+-/*## Java 1.7 ##
++
+     @Override
+     public <T> T getObject(int parameterIndex, Class<T> type) {
+         return null;
+     }
+-//*/
+ 
+     /**
+      * [Not supported]
+@@ -1582,12 +1581,11 @@
+      * @param parameterName the parameter name
+      * @param type the class of the returned value
+      */
+-/*## Java 1.7 ##
++
+     @Override
+     public <T> T getObject(String parameterName, Class<T> type) {
+         return null;
+     }
+-//*/
+ 
+     private ResultSetMetaData getCheckedMetaData() throws SQLException {
+         ResultSetMetaData meta = getMetaData();

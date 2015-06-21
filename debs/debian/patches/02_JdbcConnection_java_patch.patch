@@ -1,0 +1,86 @@
+--- h2database-1.4.187/h2/src/main/org/h2/jdbc/JdbcConnection.java	2015-04-10 14:14:31.000000000 -0430
++++ h2database-1.4.187~/h2/src/main/org/h2/jdbc/JdbcConnection.java	2015-06-21 14:36:17.802023113 -0430
+@@ -47,10 +47,7 @@
+ import org.h2.value.ValueInt;
+ import org.h2.value.ValueNull;
+ import org.h2.value.ValueString;
+-
+-/*## Java 1.7 ##
+ import java.util.concurrent.Executor;
+-//*/
+ 
+ /**
+  * <p>
+@@ -80,6 +77,7 @@
+ 
+     private int savepointId;
+     private String catalog;
++    private String schema;
+     private Statement executingStatement;
+     private final CompareMode compareMode = CompareMode.getInstance(null, 0);
+     private final CloseWatcher watcher;
+@@ -1834,34 +1832,31 @@
+      *
+      * @param schema the schema
+      */
+-/*## Java 1.7 ##
++
+     @Override
+     public void setSchema(String schema) {
+-        // not supported
++        this.schema = schema;
+     }
+-//*/
+ 
+     /**
+      * [Not supported]
+      */
+-/*## Java 1.7 ##
++
+     @Override
+     public String getSchema() {
+-        return null;
++        return schema;
+     }
+-//*/
+ 
+     /**
+      * [Not supported]
+      *
+      * @param executor the executor used by this method
+      */
+-/*## Java 1.7 ##
++
+     @Override
+     public void abort(Executor executor) {
+         // not supported
+     }
+-//*/
+ 
+     /**
+      * [Not supported]
+@@ -1869,22 +1864,20 @@
+      * @param executor the executor used by this method
+      * @param milliseconds the TCP connection timeout
+      */
+-/*## Java 1.7 ##
++
+     @Override
+     public void setNetworkTimeout(Executor executor, int milliseconds) {
+         // not supported
+     }
+-//*/
+ 
+     /**
+      * [Not supported]
+      */
+-/*## Java 1.7 ##
++
+     @Override
+     public int getNetworkTimeout() {
+         return 0;
+     }
+-//*/
+ 
+     /**
+      * Check that the given type map is either null or empty.

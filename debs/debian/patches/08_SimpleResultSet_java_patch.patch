@@ -1,0 +1,30 @@
+--- h2database-1.4.187/h2/src/main/org/h2/tools/SimpleResultSet.java	2015-04-10 14:14:31.000000000 -0430
++++ h2database-1.4.187~/h2/src/main/org/h2/tools/SimpleResultSet.java	2015-06-21 14:36:17.794023113 -0430
+@@ -821,12 +821,11 @@
+      * @param columnIndex the column index (1, 2, ...)
+      * @param type the class of the returned value
+      */
+-/*## Java 1.7 ##
++
+     @Override
+     public <T> T getObject(int columnIndex, Class<T> type) {
+         return null;
+     }
+-//*/
+ 
+     /**
+      * INTERNAL
+@@ -834,12 +833,11 @@
+      * @param columnName the column name
+      * @param type the class of the returned value
+      */
+-/*## Java 1.7 ##
++
+     @Override
+     public <T> T getObject(String columnName, Class<T> type) {
+         return null;
+     }
+-//*/
+ 
+     /**
+      * INTERNAL
