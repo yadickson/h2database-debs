@@ -1,5 +1,5 @@
 --- h2database-1.4.187/h2/src/main/org/h2/jdbcx/JdbcDataSource.java	2015-04-10 14:14:31.000000000 -0430
-+++ h2database-1.4.187~/h2/src/main/org/h2/jdbcx/JdbcDataSource.java	2015-06-21 14:36:17.782023112 -0430
++++ h2database-1.4.187~/h2/src/main/org/h2/jdbcx/JdbcDataSource.java	2015-07-02 09:31:15.585056813 -0430
 @@ -24,10 +24,7 @@
  import org.h2.jdbc.JdbcConnection;
  import org.h2.message.TraceObject;
@@ -11,13 +11,12 @@
  
  /**
   * A data source for H2 database connections. It is a factory for XAConnection
-@@ -425,12 +422,11 @@
+@@ -425,12 +422,9 @@
      /**
       * [Not supported]
       */
 -/*## Java 1.7 ##
-+
-     @Override
+-    @Override
      public Logger getParentLogger() {
          return null;
      }

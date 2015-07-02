@@ -1,31 +1,23 @@
 # h2database-debs
-Build Debian Package for H2 Database Engine (v1.4.187)
+Build Debian Package for H2 Database Engine
 
-**Instructions**
+**Build dependencies**
 
-Inside of the debs folder
-
-**Gets orig source code**
-
-```
-debian/rules get-orig-source
-```
-
-**Check dependencies**
-
-```
-dpkg-checkbuilddeps
-```
-
-**Build source package**
-
-```
-debuild -S -nc -uc -us
-```
+- debhelper (>= 9)
+- cdbs
+- default-jdk
+- maven-debian-helper (>= 1.5)
+- liblucene3-java
+- libosgi-compendium-java
+- libosgi-core-java
+- libservlet2.5-java
+- libslf4j-java
+- libjts-java
 
 **Tested**
 
-```
-Debian jessie
-```
+- Debian wheezy
+- Debian jessie
+
+[Release page](https://github.com/yadickson/h2database-debs/releases)
 

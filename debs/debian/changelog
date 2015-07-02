@@ -1,6 +1,12 @@
+h2database (1.4.187-2) unstable; urgency=medium
+
+  * New release
+
+ -- Yadickson Soto <yadickson@gmail.com>  Thu, 02 Jul 2015 00:59:02 -0430
+
 h2database (1.4.187-1) unstable; urgency=low
 
-  * New upstream release
+  * Init commit
 
  -- Yadickson Soto <yadickson@gmail.com>  Wed, 14 May 2014 18:07:12 -0430
 
