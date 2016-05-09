@@ -1,6 +1,6 @@
---- h2database-1.4.187/h2/src/main/org/h2/Driver.java	2015-04-10 14:14:31.000000000 -0430
-+++ h2database-1.4.187~/h2/src/main/org/h2/Driver.java	2015-07-02 09:31:15.881056818 -0430
-@@ -14,10 +14,7 @@
+--- a/h2/src/main/org/h2/Driver.java
++++ b/h2/src/main/org/h2/Driver.java
+@@ -14,10 +14,7 @@ import org.h2.engine.Constants;
  import org.h2.jdbc.JdbcConnection;
  import org.h2.message.DbException;
  import org.h2.upgrade.DbUpgrade;
@@ -11,11 +11,12 @@
  
  /**
   * The database driver. An application should not use this class directly. The
-@@ -143,11 +140,9 @@
+@@ -143,12 +140,10 @@ public class Driver implements java.sql.
      /**
       * [Not supported]
       */
 -/*## Java 1.7 ##
+     @Override
      public Logger getParentLogger() {
          return null;
      }

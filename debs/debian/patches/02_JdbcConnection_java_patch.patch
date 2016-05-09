@@ -1,6 +1,6 @@
---- h2database-1.4.187/h2/src/main/org/h2/jdbc/JdbcConnection.java	2015-04-10 14:14:31.000000000 -0430
-+++ h2database-1.4.187~/h2/src/main/org/h2/jdbc/JdbcConnection.java	2015-07-02 09:31:15.861056817 -0430
-@@ -47,10 +47,7 @@
+--- a/h2/src/main/org/h2/jdbc/JdbcConnection.java
++++ b/h2/src/main/org/h2/jdbc/JdbcConnection.java
+@@ -47,10 +47,7 @@ import org.h2.value.Value;
  import org.h2.value.ValueInt;
  import org.h2.value.ValueNull;
  import org.h2.value.ValueString;
@@ -11,15 +11,15 @@
  
  /**
   * <p>
-@@ -80,6 +77,7 @@
+@@ -80,6 +77,7 @@ public class JdbcConnection extends Trac
  
      private int savepointId;
      private String catalog;
 +    private String schema;
      private Statement executingStatement;
-     private final CompareMode compareMode = CompareMode.getInstance(null, 0);
      private final CloseWatcher watcher;
-@@ -1834,34 +1832,25 @@
+     private int queryTimeoutCache = -1;
+@@ -1833,34 +1831,25 @@ public class JdbcConnection extends Trac
       *
       * @param schema the schema
       */
@@ -56,7 +56,7 @@
  
      /**
       * [Not supported]
-@@ -1869,22 +1858,16 @@
+@@ -1868,22 +1857,16 @@ public class JdbcConnection extends Trac
       * @param executor the executor used by this method
       * @param milliseconds the TCP connection timeout
       */

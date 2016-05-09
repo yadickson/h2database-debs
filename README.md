@@ -16,8 +16,10 @@ Build Debian Package for H2 Database Engine
 
 **Tested**
 
-- Debian wheezy
 - Debian jessie
 
-[Release page](https://github.com/yadickson/h2database-debs/releases)
+**Links**
+
+- [Home page from source code](https://github.com/h2database/h2database)
+- [Debian source code release](https://github.com/yadickson/h2database-debs/releases)
 
